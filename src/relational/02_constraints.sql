@@ -1,0 +1,2 @@
+-- Contraintes metier relationnelles.
+

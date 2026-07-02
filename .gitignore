@@ -1,0 +1,12 @@
+# Fichiers temporaires Windows / Office
+~$*
+*.tmp
+*.bak
+
+# Exports locaux
+*.log
+
+# Dossiers outils
+.vscode/
+.idea/
+
