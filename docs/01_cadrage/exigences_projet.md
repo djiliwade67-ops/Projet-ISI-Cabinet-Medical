@@ -9,17 +9,18 @@
 
 ## Donnees principales
 
-- Patient : nom, prenom, date de naissance, poids, taille, telephone, adresse.
-- Medecin : informations du praticien du cabinet.
-- Visite : date, motif, lieu, patient concerne, medecin.
-- Ordonnance medicamenteuse : liee a une visite, avec un ou plusieurs medicaments.
-- Medicament : numero d'identification, nom, categorie, description.
-- Posologie : prises, doses par prise, frequence journaliere, duree.
-- Analyses : demande d'examens complementaires et reception des resultats.
-- Allergies : medicaments ou familles de medicaments.
-- Maladies : maladies connues du patient.
-- Sejours : passages dans un hopital ou une clinique.
-- Operations : interventions subies par le patient.
+- Patient :  id_patient, nom, prenom, date de naissance, poids, taille, telephone, adresse.
+- Medecin :  id_mc, date_visite, prescrip , analyses, result.
+- Visite :  id_vs, date, prescription, analyse ,resultat.
+- Ordonnance  id_ord, medicamenteuse, date_ord .
+- Medicament :  id_mdm, numero d'identification, nom, categorie, description.
+- Posologie :  id_psg, prises, doses par prise, frequence journaliere, duree.
+- Analyses :  id_an, nom d analyse, type d analyse, resultats.
+- Allergies : id_al, nom allergies, consequences .
+- Maladies :  id_mld, nom de la maladie, contraintes, traitement.
+- Sejours :  id_sjr, duree.
+- Operations :  id_opr, nom de l operation, consequence, .
+- Centre de Santer :id_cs lieu;
 
 ## Regles metier importantes
 
