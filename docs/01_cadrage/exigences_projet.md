@@ -9,18 +9,18 @@
 
 ## Donnees principales
 
-- Patient :  id_patient, nom, prenom, date de naissance, poids, taille, telephone, adresse.
-- Medecin :  id_mc, date_visite, prescrip , analyses, result.
-- Visite :  id_vs, date, prescription, analyse ,resultat.
-- Ordonnance  id_ord, medicamenteuse, date_ord .
-- Medicament :  id_mdm, numero d'identification, nom, categorie, description.
-- Posologie :  id_psg, prises, doses par prise, frequence journaliere, duree.
-- Analyses :  id_an, nom d analyse, type d analyse, resultats.
-- Allergies : id_al, nom allergies, consequences .
-- Maladies :  id_mld, nom de la maladie, contraintes, traitement.
-- Sejours :  id_sjr, duree.
-- Operations :  id_opr, nom de l operation, consequence, .
-- Centre de Santer :id_cs lieu;
+- Patient : id_patient, nom, prenom, date de naissance, poids, taille, telephone, adresse.
+- Medecin : id_medecin, nom, prenom, specialite.
+- Visite : id_visite, date, motif, lieu, patient concerne, medecin ayant effectue la visite.
+- Ordonnance medicamenteuse : id_ordonnance, date, visite associee.
+- Medicament : id_medicament, numero d'identification, nom, categorie ou famille, description.
+- Prescription : ordonnance, medicament, nombre de prises, doses par prise, frequence journaliere, duree.
+- Analyses : ordonnance d'analyse, type d'analyse, resultat recu, date du resultat, contenu du resultat.
+- Allergies : allergies aux medicaments et allergies aux familles de medicaments.
+- Maladies : id_maladie, libelle, date de diagnostic pour le patient.
+- Sejours : id_sejour, centre de sante, dates, motif, maladie eventuelle.
+- Operations : id_operation, nom, description, date de l'operation pendant un sejour.
+- Centre de sante : id_centre, nom, type, adresse.
 
 ## Regles metier importantes
 
@@ -38,4 +38,3 @@
 - Regles de confidentialite et autorisations.
 - Solution relationnelle : MCD, dictionnaire, schema relationnel, scripts SQL, triggers.
 - Solution objet-relationnelle : modele, schema, scripts SQL, triggers ou methodes.
-

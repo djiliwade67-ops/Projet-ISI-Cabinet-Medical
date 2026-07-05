@@ -18,8 +18,9 @@ médecins du cabinet et par la secrétaire.
 
 | Fichier | Description |
 |---|---|
-| `dictionnaire_donnees.md` | Dictionnaire des 45 propriétés élémentaires (code, type, taille, nature) |
-| `test_queries.sql` | Script SQL complet : création de la base et des 19 tables (contraintes, clés primaires/étrangères) |
+| `docs/03_relationnel/dictionnaire_donnees_relationnel.md` | Dictionnaire des propriétés élémentaires (code, type, taille, nature) |
+| `docs/03_relationnel/schema_relationnel.md` | MLD relationnel issu du MCD |
+| `src/relational/01_create_tables.sql` | Script SQL relationnel : création des tables, clés primaires, clés étrangères et contraintes |
 
 ## Situation actuelle
 
@@ -42,4 +43,4 @@ La solution cible est une base de donnees centralisee permettant de gerer les do
 1. **Dictionnaire de données** — recensement des propriétés élémentaires du domaine.
 2. **MCD** (Modèle Conceptuel de Données) — entités, associations et cardinalités.
 3. **MLD** (Modèle Logique de Données) — traduction relationnelle du MCD.
-4. **Script SQL** — création physique de la base, testée et validée (SQLite).
+4. **Script SQL** — création physique de la base relationnelle, prévue pour MySQL / MariaDB.

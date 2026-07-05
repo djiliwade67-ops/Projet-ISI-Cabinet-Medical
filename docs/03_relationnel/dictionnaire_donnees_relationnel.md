@@ -66,21 +66,17 @@ Nature : **E** = Élémentaire, **C** = Calculée, **ID** = Identifiant
 
 ## Script SQL
 
-Le fichier `creation_bdd_dossier_medical.sql` :
+Le fichier `src/relational/01_create_tables.sql` :
 
-1. crée la base `dossier_medical` (UTF-8) ;
-2. crée les 14 tables dans l'ordre respectant les dépendances de clés étrangères ;
-3. déclare les contraintes d'intégrité (clés primaires, clés étrangères, `CHECK`, `UNIQUE`).
+1. crée la base `dossier_medical` si elle n'existe pas ;
+2. crée les 19 tables relationnelles dans l'ordre respectant les dépendances de clés étrangères ;
+3. déclare les contraintes d'intégrité principales : clés primaires, clés étrangères, `CHECK`, `UNIQUE`.
 
-Exécution (MySQL / MariaDB) :
+Exécution prévue avec MySQL / MariaDB :
 
 ```bash
-mysql -u root -p < creation_bdd_dossier_medical.sql
+mysql -u root -p < src/relational/01_create_tables.sql
 ```
-
-Le script a été testé avec succès sous SQLite (adaptation mineure : suppression des instructions
-`CREATE DATABASE` / `USE`, non supportées par ce moteur) : les 14 tables sont créées sans erreur
-et `PRAGMA foreign_key_check` ne remonte aucune anomalie.
 
 
 

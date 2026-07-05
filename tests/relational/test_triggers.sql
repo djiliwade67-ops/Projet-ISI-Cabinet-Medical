@@ -1,2 +1,0 @@
--- Tests des triggers relationnels.
-
